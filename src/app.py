@@ -19,7 +19,8 @@ def add_new_todo():
 
 @app.route('/todos/<int:position>', methods=['DELETE'])
 def delete_todo(position):
-    removed_element = todos.pop(position)
+    del_position = position-1
+    removed_element = todos.pop(del_position)
     print(removed_element)
     return todos
     
